@@ -6,9 +6,92 @@
 body {
     width: 100vw;
     height: 100vh;
+}
 
-    background-color: black;
-    color: white;
+img.loading-01 {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 0;
+    height: 0;
+
+    opacity:0;
+
+    object-fit: cover;
+
+    animation-name: loading-01;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes loading-01 {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    15%,
+    25% {
+        width: 250px;
+        height: 400px;
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+}
+
+.background {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 0;
+    height: 0;
+
+    opacity: 0;
+
+    background:url(./img/background.jpeg);
+    background-position: center;
+    background-size: cover;
+
+    animation-name: hello-bg;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hello-bg {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    75%,
+    80% {
+        width: 300px;
+        height: 400px;
+        opacity: 0;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
 }
 
 .parent {
@@ -16,6 +99,9 @@ body {
 
     width: 100%;
     height: 100%;
+
+    background-color: black;
+    color: white;
 
     overflow: hidden;
 }
@@ -31,6 +117,8 @@ body {
     top: 50%;
 
     transform: translateY(-50%);
+
+    overflow: hidden;
 }
 
 span {
@@ -138,11 +226,23 @@ span:nth-of-type(7) {
         background-color: #634e79;
     }
 
-    25%,
-    26% {
+    10% {
+        background-color: #634e79;
+        opacity: 1;
+    }
+
+    15%,
+    25% {
         width: 250px;
         height: 400px;
-        background-color: #634e79;
+        background-color: #e8c99b;
+        opacity: 0;
+    }
+
+    30% {
+        width: 250px;
+        height: 400px;
+        opacity: 1;
     }
 
     50%,
@@ -157,17 +257,18 @@ span:nth-of-type(7) {
         width: 300px;
         height: 400px;
         background-color: #0e5449;
+        opacity: 1;
     }
 
     100% {
         width: 100%;
         height: 100%;
-        background-color: white;
+        opacity: 0;
     }
 }
 
 /*
-background:url(./pic/loading-01.png);
+background:url(./img/loading-01.png);
 background-position: center;
 background-size: cover;
 */
