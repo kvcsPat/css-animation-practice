@@ -51,6 +51,92 @@ img.loading-01 {
     }
 }
 
+img.loading-02 {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 0;
+    height: 0;
+
+    opacity:0;
+
+    object-fit: cover;
+
+    animation-name: loading-02;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes loading-02 {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    50%,
+    55% {
+        width: 550px;
+        height: 250px;
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0;
+    }
+}
+
+img.loading-03 {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 0;
+    height: 0;
+
+    opacity:0;
+
+    object-fit: cover;
+
+    animation-name: loading-03;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes loading-03 {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    75%,
+    80% {
+        width: 300px;
+        height: 400px;
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 0;
+    }
+}
+
 .background {
     position: fixed;
 
@@ -211,7 +297,7 @@ span:nth-of-type(7) {
 
     background-color: #634e79;
 
-    animation-name: trans;
+    animation-name: trans-box;
     animation-duration: 3.0s;
     animation-timing-function: ease-in-out;
     animation-delay: 0.7s;
@@ -219,7 +305,7 @@ span:nth-of-type(7) {
     /*animation-iteration-count: infinite;*/
 }
 
-@keyframes trans {
+@keyframes trans-box {
     0% {
         width: 0;
         height: 0;
@@ -242,6 +328,12 @@ span:nth-of-type(7) {
     30% {
         width: 250px;
         height: 400px;
+        background-color: #e8c99b;
+        opacity: 1;
+    }
+
+    45% {
+        background-color: #e8c99b;
         opacity: 1;
     }
 
@@ -250,12 +342,27 @@ span:nth-of-type(7) {
         width: 550px;
         height: 250px;
         background-color: #e8c99b;
+        opacity: 0;
+    }
+
+    60% {
+        background-color: #0e5449;
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
     }
 
     75%,
     80% {
         width: 300px;
         height: 400px;
+        background-color: #0e5449;
+        opacity: 0;
+    }
+
+    85% {
         background-color: #0e5449;
         opacity: 1;
     }
